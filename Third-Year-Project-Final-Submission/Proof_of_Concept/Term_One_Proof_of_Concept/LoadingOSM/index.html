@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OpenStreetMap - Proof of Concept</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- Using a Hosted Version of Leaflet: Links below enables subresource integrity -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            html, body, #mapid {
+                height: 100%;
+                width: 100vw;
+            }
+
+            #mapid {
+                top: 0; 
+                bottom: 0; 
+                left: 0; 
+                right: 0; 
+            }
+            ul {
+                list-style-type: none; 
+                margin: 0; 
+                padding: 0; 
+                overflow: hidden; 
+                background-color: #333; 
+            }
+
+            li {
+                float: right; 
+            }
+
+            li a {
+                display: block; 
+                color: white; 
+                text-align: center; 
+                padding: 14px 16px; 
+                text-decoration: none; 
+            }
+
+            li a:hover:not(.active) {
+                background-color: #111; 
+            }
+
+            .homeButton {
+                float: left; 
+            }
+
+            .active {
+                background-color: #4CAF50;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div>
+            <ul> <!-- Navigation bar-->
+                <li class="homeButton active"><a href="#home">Home</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#login">Log In</a></li>
+            </ul> <!-- /Navigation bar -->
+        </div>
+
+        <div id="mapid" style="height: 590px; width: 100%;"></div>
+
+        <script> 
+
+            // Initialising the map so that it locates the users current location and sets the zoom level to 13
+            var mymap = L.map('mapid').locate({setView : true, maxZoom: 13}); 
+
+            // Adding the tile layer to the map (mymap) and including the attribution for the contributors of the map tile
+            L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=rEB9H4Z1tk1AaMs4H8U7', {
+                attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+            }).addTo(mymap); 
+
+            // Adding the polygon the mark out part of the virginia water park
+            var virginiawater = L.polygon([
+                [51.40780, -0.61498], 
+                [51.40432, -0.61498], 
+                [51.40319, -0.61609], 
+                [51.40212, -0.61884], 
+                [51.39917, -0.61772], 
+                [51.40110, -0.60502], 
+                [51.40641, -0.59687], 
+                [51.40876, -0.60330], 
+                [51.40844, -0.61309] 
+            ], {
+                // Changing the styling of the polygon
+                color: 'red',  
+                fillColor: '#f03', 
+                fillOpacity: 0.5, 
+            }).addTo(mymap); 
+
+            // Adding markers close to the polygon and within the polygon for testing
+            var virginiawaterpavillion = L.marker([51.41020, -0.59252]).addTo(mymap); 
+            var watervirginiawater = L.marker([51.40384, -0.61389]).addTo(mymap); 
+
+            // Adding a custom marker for the current location
+            var currentLocationMarker = L.icon({
+                iconUrl: 'CurrentLocation.png', 
+                iconSize: [50, 50], 
+                iconAnchor: [25, 25], 
+                popupAnchor: [1, -15]
+            }); 
+
+            // Finding the current location and putting the current location marker on that position
+            function onLocationFound(e) {
+                L.marker(e.latlng, {icon: currentLocationMarker}).addTo(mymap).bindPopup("Current Location").openPopup();
+            }
+            mymap.on('locationfound', onLocationFound); 
+
+            // If there is an error, this error message will appear
+            function onLocationError(e) {
+                alert(e.message); 
+            }
+            mymap.on('locationerror', onLocationError); 
+            
+            // Popup for the virginia water lake area
+            virginiawater.bindPopup("<b>This is a test popup!</b><br>This is Virginia Water Lake Area!"); 
+
+        </script>
+
+    </body>
+</html>

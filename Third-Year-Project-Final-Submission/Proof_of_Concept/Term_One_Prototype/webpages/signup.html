@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Title of the website which appears in the tab -->
+    <title>Sign Up | AONB Locator</title>
+    <!-- Link to external stylesheet and scripting files -->
+    <link rel="stylesheet" href="../styles/loginStyles.css" />
+    <!-- <script src="./scripts/script.js"></script> -->
+    <!-- Links to Bootstrap 4 library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Link to a Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+    <!-- Link to FontAwesome kit code -->
+    <script src="https://kit.fontawesome.com/5c7bfbcc6d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg-signup">
+
+        <!-- Responsive navbar at the top of the web page -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="../index.html"><i class="fab fa-pagelines">
+                        AONB Locator</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse flex-row-reverse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user-plus"> Sign Up</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../webpages/login.html"><i
+                                    class="fas fa-user"> Login</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Signup form using CSS for signin form -->
+        <form class="form-signin" style="color: white; text-align: center;">
+            <h1><i class="fab fa-pagelines"></i> AONB Locator</h1>
+            <h3 class="h3 mb-3 font-weight-normal">Sign up for an account</h3>
+            <label for="inputEmail"><i class="fas fa-at"></i> Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="confirmEmail"><i class="fas fa-at"></i> Confirm Email address</label>
+            <input type="email" id="confirmEmail" class="form-control" placeholder="Confirm Email address" required autofocus>
+            <label for="inputPassword"><i class="fas fa-key"></i> Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <label for="confirmPassword"><i class="fas fa-key"></i> Confirm Password</label>
+            <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+            <div class="checkbox mb-3">
+                <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">Sign Up</button>
+        </form>
+
+        <!-- Footer at the bottom of the webpage -->
+        <div class="mt-5 pt-5 pb-5 footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-xs-12 about-company">
+                        <h2><i class="fab fa-pagelines"> AONB Locator</i></h2>
+                        <p class="pr-5 text-white-50">Thank you for visiting AONB Locator. This is a map application for finding all of the Areas of Outstanding Natural Beauty in the UK. Happy Exploring!
+                        </p>
+                        <a href="#"><i class="fa fa-linkedin-square"></i></a></p>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 links">
+                        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+                        <ul class="m-0 p-0">
+                            <li>- <a href="#">Sign Up</a></li>
+                            <li>- <a href="#">Login</a></li>
+                            <li>- <a href="#">Terms & Conditions</a></li>
+                            <li>- <a href="#">Accessability Statement</a></li>
+                            <li>- <a href="#">Sed faucibus</a></li>
+                            <li>- <a href="#">Mauris efficitur nulla</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col copyright">
+                        <p class=""><small class="text-white-50">© 2020. Jack Wearn.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

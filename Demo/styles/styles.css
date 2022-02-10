@@ -1,0 +1,184 @@
+/* Styling all elements of the HTML document */
+
+* {
+    /* Selecting the font-family which will be used on the website */
+    font-family: 'Lobster', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* Changing the colour of the hover on the navbar links */
+
+.nav-link:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+.navbar-brand:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+
+/* Styling based on class */
+
+.form-inline {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: none;
+}
+
+.form-inline #search {
+    width: 90%;
+}
+
+
+/* Styling based on ID */
+
+#submitbtn {
+    background-color: white;
+    border: white;
+    border-radius: 5px;
+    padding: none;
+}
+
+
+/* Setting the background image for the login page */
+
+.bg-login {
+    /* Image courtesy of Klavs Taimins (@taimklavs), Sunset from Mount Lycabettus, https://unsplash.com/photos/w1sbytdTTKA */
+    background-image: url("../images/background-login.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#AONBMap {
+    border: 2px solid black;
+}
+
+#rightside {
+    border: 2px solid black;
+}
+
+.rightnavtabs {
+    color: black !important;
+}
+
+.rightLinks {
+    color: black !important;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.rightLinks:hover {
+    color: rgb(208, 137, 5) !important;
+    text-align: left;
+}
+
+.aonblocationslist {
+    list-style: none;
+    text-align: left;
+}
+
+.locationlist {
+    list-style: none;
+    text-align: left;
+}
+
+
+/* Styling the footer */
+
+.footer {
+    background: #343a40;
+    color: white;
+}
+
+.footer .links ul {
+    list-style-type: none;
+}
+
+.footer .links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .links li a:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+.footer .about-company a:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+.footer .location i {
+    font-size: 18px;
+}
+
+.footer .copyright p {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#searchbar {
+    padding: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    font-size: 11px;
+    background-color: white;
+    width: 250px;
+    border-radius: 2px;
+    color: black;
+}
+
+.rightTitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+.subtitle {
+    text-align: center;
+    font-weight: lighter;
+    color: gray;
+    font-size: small;
+}
+
+.downloadbutton {
+    border: 2px solid rgba(0, 0, 0, 0.2) !important;
+    background-color: #f4f4f4 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-radius: 2px !important;
+}
+
+.downloadbtn {
+    border-radius: 2px !important;
+    background-color: white !important;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    font-size: 22px !important;
+    display: block !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    color: black !important;
+    font: bold 18px 'Lucida Console', Monaco, monospace !important;
+    text-indent: 1px;
+}
+
+
+/* .aonblocationslist {
+    text-decoration: none !important;
+    color: black !important; 
+    text-align: justify !important;
+    list-style: none;
+}
+
+.locationlist, li, a {
+    text-decoration: none !important;
+    color: black !important; 
+    text-align: justify !important;
+}
+
+.locationlist, li, a:hover {
+    text-decoration: underline !important;
+    color: rgb(208, 137, 5) !important; 
+} */

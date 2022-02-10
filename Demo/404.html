@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Title of the website which appears in the tab -->
+    <title>AONB Locator</title>
+    <!-- Link to external stylesheet and scripting files -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- <script src="./scripts/script.js"></script> -->
+    <!-- Links to Bootstrap 4 library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Link to a Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+    <!-- Link to FontAwesome kit code -->
+    <script src="https://kit.fontawesome.com/5c7bfbcc6d.js" crossorigin="anonymous"></script>
+    <!-- Links to Leaflet JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+
+<body>
+    <div>
+        <!-- Responsive navbar at the top of the web page -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="./index.html"><i class="fab fa-pagelines">
+                        AONB Locator</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search..." name="search" id="search">
+                <button id="submitbtn" class="btn btn-search my-2 my-sm-0 " type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+            </form>
+            <div class="collapse navbar-collapse flex-row-reverse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-question-circle"> About</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./signup.html"><i
+                                    class="fas fa-user-plus"> Sign
+                                    Up</i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html"><i
+                                    class="fas fa-user"> Login</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav><br><br><br>
+
+        <h1 style="color: red; text-align: center;">Error: 404 Page Not Found</h1>
+        <p style="padding: 5px">Sorry, but we cannot seem to find the web page you are looking for. Check the spelling of what you have typed and try again. If the error persists, the webpage may not exist. In which case, check out all of the Areas of Oustanding Natural Beauty
+            on the right hand side of the home page! Thank you!
+        </p>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <br>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-success" style="justify-content: center; text-align: center; width: 100%;"><a
+                                style="text-decoration: none; color: white;"
+                                href="./index.html">Back
+                                To
+                                Home!</a></button>
+                </div>
+                <div class="col">
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer at the bottom of the webpage -->
+        <div class="mt-5 pt-5 pb-5 footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-xs-12 about-company">
+                        <h2><i class="fab fa-pagelines"> AONB Locator</i></h2>
+                        <p class="pr-5 text-white-50">Thank you for visiting AONB Locator. This is a map application for finding all of the Areas of Outstanding Natural Beauty in the UK. Happy Exploring!
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 links">
+                        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+                        <ul class="m-0 p-0">
+                            <li><a href="./signup.html">Sign Up</a></li>
+                            <li><a href="./login.html">Login</a></li>
+                            <li><a href="./termsofuse.html">Terms of Use</a></li>
+                            <li><a href="#">Accessability Statement</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Information Pages</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col copyright">
+                        <p class=""><small class="text-white-50">© 2020. Jack Wearn.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

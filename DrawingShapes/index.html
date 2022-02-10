@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing shapes with HTML5 Canvas</title>
+</head>
+<body>
+    <!-- Drawing an empty canvas to the screen -->
+    <canvas id="Empty" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+    <!-- Drawing a canvas with a circle to the screen -->
+    <canvas id="circle" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+    <!-- Drawing a canvas with a line to the screen -->
+    <canvas id="line" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+    <!-- Drawing a canvas with plain text to the screen -->
+    <canvas id="text" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+    <!-- Drawing a canvas with stroke text to the screen -->
+    <canvas id="text2" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+
+    <script>
+        // Drawing a canvas with a circle to the screen
+        var c = document.getElementById("circle");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // Drawing a canvas with a line to the screen
+        var x = document.getElementById("line");
+        var xy = x.getContext("2d");
+        xy.moveTo(0, 0);
+        xy.lineTo(200, 100);
+        xy.stroke();
+
+        // Drawing a canvas with plain text to the screen
+        var c = document.getElementById("text");
+        var ctx2 = c.getContext("2d");
+        ctx2.font = "30px Arial";
+        ctx2.fillText("Hello World", 10, 50);
+
+        // Drawing a canvas with stroke text to the screen
+        var c = document.getElementById("text2");
+        var ctx3 = c.getContext("2d");
+        ctx3.font = "30px Arial";
+        ctx3.strokeText("Hello World 2!", 10, 50);
+    </script>
+</body>
+</html>

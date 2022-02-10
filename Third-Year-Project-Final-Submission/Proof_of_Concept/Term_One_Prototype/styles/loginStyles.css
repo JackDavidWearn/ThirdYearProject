@@ -1,0 +1,174 @@
+/* Styling all elements of the HTML document */
+
+* {
+    /* Selecting the font-family which will be used on the website */
+    /* font-family: 'Lobster', cursive; */
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* Setting the height of all of the html and body to 100% */
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* Changing the colour of the hover on the navbar links */
+
+.navbar,
+.navbar-nav,
+.nav-item,
+.nav-link:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+.navbar-brand:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+
+/* Setting the background image for signup page */
+
+.bg-signup {
+    /* Image courtesy of Johannes Plenio (@jplenio), Mystery Forest Light, https://unsplash.com/photos/RwHv7LgeC7s */
+    background-image: url("../images/background-signup.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Setting the background image for the login page */
+
+.bg-login {
+    /* Image courtesy of Klavs Taimins (@taimklavs), Sunset from Mount Lycabettus, https://unsplash.com/photos/w1sbytdTTKA */
+    background-image: url("../images/background-login.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Styling the signin and signup form */
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+
+/* Styling the checkbox on the form for signin and signup */
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+
+/* Styling the control for the form */
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+
+/* Styling the email input box for email */
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+/* Styling the password input box for email */
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+/* Styling the signup button and the hover for it */
+
+.signup-btn {
+    background-color: orange !important;
+    border-color: orange !important;
+}
+
+.signup-btn:hover {
+    background-color: rgb(208, 137, 5) !important;
+    border-color: rgb(208, 137, 5) !important;
+}
+
+
+/* Styling the login button and the hover for it */
+
+.login-btn {
+    background-color: orange !important;
+    border-color: orange !important;
+}
+
+.login-btn:hover {
+    background-color: rgb(208, 137, 5) !important;
+    border-color: rgb(208, 137, 5) !important;
+}
+
+
+/* Styling the footer */
+
+.footer {
+    background: #343a40;
+    color: white;
+}
+
+.footer .links ul {
+    list-style-type: none;
+}
+
+.footer .links li a {
+    color: white;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+}
+
+.footer .links li a:hover {
+    text-decoration: none;
+    color: rgb(208, 137, 5) !important;
+}
+
+.footer .about-company i {
+    font-size: 25px;
+}
+
+.footer .about-company a {
+    color: white;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+}
+
+.footer .about-company a:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+.footer .location i {
+    font-size: 18px;
+}
+
+.footer .copyright p {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

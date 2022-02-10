@@ -1,0 +1,167 @@
+/* Styling all elements of the HTML document */
+
+* {
+    /* Selecting the font-family which will be used on the website */
+    font-family: 'Lobster', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* Styling the marker */
+
+#marker {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* Styling the mapbox popup */
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+
+/* Changing the colour of the hover on the navbar links */
+
+.nav-link:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+.navbar-brand:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+
+/* Changing the background for the title of the informaiton pages */
+
+.title {
+    background-color: #343a40;
+}
+
+.infoTitle {
+    text-align: center;
+    color: white;
+}
+
+.infoSubtitle {
+    text-align: center;
+}
+
+a.infoSubtitle {
+    display: block;
+    color: white;
+}
+
+a.infoSubtitle:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+
+/* Setting the background image for the login page */
+
+.bg-login {
+    /* Image courtesy of Klavs Taimins (@taimklavs), Sunset from Mount Lycabettus, https://unsplash.com/photos/w1sbytdTTKA */
+    background-image: url("../backgroundImages/background-login.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-signup {
+    /* Image courtesy of Johannes Plenio (@jplenio), Mystery Forest Light, https://unsplash.com/photos/RwHv7LgeC7s */
+    background-image: url("../backgroundImages/background-signup.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Styling the navigation tabs on the index page */
+
+#rightside {
+    border: 2px solid black;
+}
+
+.rightnavtabs {
+    color: black !important;
+}
+
+.rightLinks {
+    color: black !important;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.rightLinks:hover {
+    color: rgb(208, 137, 5) !important;
+    text-align: left;
+}
+
+
+/* Styling the lists within each of the navtabs on the index page */
+
+.aonblocationslist {
+    list-style: none;
+    text-align: left;
+}
+
+.locationlist {
+    list-style: none;
+    text-align: left;
+}
+
+
+/* Styling the custom searchbar on the map on the index page */
+
+#searchbar {
+    padding: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    font-size: 11px;
+    background-color: white;
+    width: 250px;
+    border-radius: 2px;
+    color: black;
+}
+
+.findTitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Styling the footer */
+
+.footer {
+    background: #343a40;
+    color: white;
+}
+
+.footer .links ul {
+    list-style-type: none;
+}
+
+.footer .links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .links li a:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+.footer .about-company a:hover {
+    color: rgb(208, 137, 5) !important;
+}
+
+.footer .location i {
+    font-size: 18px;
+}
+
+.footer .copyright p {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

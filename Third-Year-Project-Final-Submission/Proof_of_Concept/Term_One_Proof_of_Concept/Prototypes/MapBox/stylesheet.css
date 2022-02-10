@@ -1,0 +1,25 @@
+.mainMap {
+    height: 650px; 
+    width: 100%; 
+}
+
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 1px;
+}
+
+.jumbotron-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+
+#aboutJumboText {
+    color: rgb(255, 255, 255); 
+    text-shadow: 10rem;
+}

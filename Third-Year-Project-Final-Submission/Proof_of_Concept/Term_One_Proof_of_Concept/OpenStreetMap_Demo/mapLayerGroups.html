@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map Layer Groups</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- Using a Hosted Version of Leaflet: Links below enables subresource integrity -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            html, body, #mapid {
+                height: 100%;
+                width: 100vw;
+            }
+
+            #mapid {
+                top: 0; 
+                bottom: 0; 
+                left: 0; 
+                right: 0; 
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div id="map" style="height: 590px; width: 100%;"></div>
+
+        <script> 
+
+            // Initialising the map so that it locates the users current location and sets the zoom level to 13
+            // var mymap = L.map('mapid').locate({setView : true, maxZoom: 13}); 
+
+            // // Adding the tile layer to the map (mymap) and including the attribution for the contributors of the map tile
+            // L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=rEB9H4Z1tk1AaMs4H8U7', {
+            //     attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+            // }).addTo(mymap); 
+
+            // Adding a custom marker for the current location
+            // var currentLocationMarker = L.icon({
+            //     iconUrl: 'CurrentLocation.png', 
+            //     iconSize: [50, 50], 
+            //     iconAnchor: [25, 25], 
+            //     popupAnchor: [1, -15]
+            // }); 
+
+            // Finding the current location and putting the current location marker on that position
+            // function onLocationFound(e) {
+            //     L.marker(e.latlng, {icon: currentLocationMarker}).addTo(mymap).bindPopup("Current Location").openPopup();
+            // }
+            // mymap.on('locationfound', onLocationFound); 
+
+            // If there is an error, this error message will appear
+            // function onLocationError(e) {
+            //     alert(e.message); 
+            // }
+            // mymap.on('locationerror', onLocationError); 
+
+            var egham = L.marker([51.41020, -0.59252]).bindPopup('This is Egham, TW20.'), 
+                virginiawater = L.marker([51.40384, -0.61389]).bindPopup('This is Virginia Water, GU25.'); 
+
+            var cities = L.layerGroup([egham, virginiawater]); 
+
+            var outdoors = L.tileLayer('https://api.maptiler.com/maps/outdoor/{z}/{x}/{y}.png?key=rEB9H4Z1tk1AaMs4H8U7', {id: 'MapID', tileSize: 512, zoomOffset: -1, attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'}), 
+                streets = L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=rEB9H4Z1tk1AaMs4H8U7', {id: 'MapID', tileSize: 512, zoomOffset: -1, attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'}); 
+
+            var map = L.map('map', {
+                center: [39.73, -104.99], 
+                zoom: 10, 
+                layers: [outdoors, cities]
+            }); 
+
+            var baseMaps = {
+                "Outdoors": outdoors, 
+                "Streets": streets
+            }; 
+
+            var overlayMaps = {
+                "Cities": cities
+            }; 
+
+            L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+            var baseMaps = {
+                "<span style='color: gray'>Outdoors</span>": outdoors,
+                "Streets": streets
+            };
+            
+        </script>
+
+    </body>
+</html>
